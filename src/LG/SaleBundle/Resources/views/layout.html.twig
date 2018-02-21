@@ -1,0 +1,16 @@
+{# src/LG/SaleBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    Le Louvre - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <hr>
+    {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+    {% block lgsale_body %}
+    {% endblock %}
+
+{% endblock %}

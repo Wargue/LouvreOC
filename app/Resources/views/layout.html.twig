@@ -1,0 +1,69 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% stylesheets '@LGSaleBundle/Resources/public/css/main.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+
+    <title>{% block title %}LG Sale{% endblock %}</title>
+
+    {% block stylesheets %}
+        {# Bootstrap download #}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    {% endblock %}
+</head>
+
+<body>
+<div class="container">
+
+    {# Download menu for each pages #}
+    <div class="row">
+        <div id="menu" class="col-md-12">
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Accueil</a></li>
+                            <li><a href="#about">Tickets</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    {# Where you can put the content #}
+    <div class="row">
+        <div id="content" class="col-md-12">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>Better and Faster Every Day © {{ 'now'|date('Y') }} .</p>
+        <p>Natural Design By LG</p>
+    </footer>
+</div>
+
+{% block javascripts %}
+    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+{% endblock %}
+
+</body>
+</html>

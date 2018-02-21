@@ -1,0 +1,5 @@
+lg_sale:
+    resource: "@LGSaleBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

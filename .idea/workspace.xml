@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/pictures/Louvre_Museum_Wikimedia_Commons.jpg" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/css/pictures/Louvre_Museum_Wikimedia_Commons.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/index.html.twig" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/index.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +23,28 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="-544">
+              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/bundles/lgsale/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -29,8 +53,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            <state relative-caret-position="119">
+              <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -81,13 +105,14 @@
         <option value="$PROJECT_DIR$/app/Resources/views/default/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/web/bundles/lgsale/css/main.css" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/css/main.css" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/lgsale/css/main.css" />
       </list>
     </option>
   </component>
@@ -196,14 +221,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -228,31 +245,37 @@
             <path>
               <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
               <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lgsale" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lgsale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lgsale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pictures" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Sale" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -269,6 +292,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Louvre\src\LG\SaleBundle\Resources\public\css" />
       <recent name="C:\wamp\www\Louvre\app\Resources\views" />
       <recent name="C:\wamp\www\Louvre\src\LG\SaleBundle\Resources\views" />
     </key>
@@ -302,7 +326,7 @@
       <workItem from="1519149582776" duration="8600000" />
       <workItem from="1519237816323" duration="4198000" />
       <workItem from="1519668625432" duration="599000" />
-      <workItem from="1519754617128" duration="3108000" />
+      <workItem from="1519754617128" duration="8102000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -315,7 +339,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18565000" />
+    <option name="totallyTimeSpent" value="23559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -521,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/lgsale/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -556,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -578,18 +588,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/css/pictures/Louvre_Museum_Wikimedia_Commons.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -602,17 +617,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        <state relative-caret-position="440">
+          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/pictures/Louvre_Museum_Wikimedia_Commons.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/public/css/main.css">
@@ -623,10 +633,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/lgsale/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="-544">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>

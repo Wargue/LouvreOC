@@ -21,4 +21,14 @@ class HomeController extends Controller
     }
 
 
+    /**
+     * @route("/Tarifs", name="Price")
+     */
+    public function priceAction()
+    {
+
+        return $this->render('LGSaleBundle:Sale:selling.html.twig');
+
+    }
+
 }

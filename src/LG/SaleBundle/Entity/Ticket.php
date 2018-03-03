@@ -44,6 +44,11 @@ class Ticket
      */
     private $birthday;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="LG\SaleBundle\Entity\Booking", inversedBy="tickets")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $booking;
 
 
 
@@ -199,5 +204,29 @@ class Ticket
     public function getTarif()
     {
         return $this->tarif;
+    }
+
+    /**
+     * Set booking
+     *
+     * @param \LG\SaleBundle\Entity\Booking $booking
+     *
+     * @return Ticket
+     */
+    public function setBooking(\LG\SaleBundle\Entity\Booking $booking)
+    {
+        $this->booking = $booking;
+
+        return $this;
+    }
+
+    /**
+     * Get booking
+     *
+     * @return \LG\SaleBundle\Entity\Booking
+     */
+    public function getBooking()
+    {
+        return $this->booking;
     }
 }

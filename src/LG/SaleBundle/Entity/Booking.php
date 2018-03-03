@@ -57,6 +57,21 @@ class Booking
      */
     private $totalPrice;
 
+    /**
+     * @ORM\OneToMany(targetEntity="LG\SaleBundle\Entity\Ticket", mappedBy="booking")
+     */
+    private $tickets;
+
+
+
+    /**
+     * Booking constructor.
+     */
+    public function __construct()
+    {
+        $this->bookingDate = new \DateTime();
+    }
+
 
     /**
      * Get id
@@ -186,5 +201,41 @@ class Booking
     public function getBookingDate()
     {
         return $this->bookingDate;
+    }
+
+    /**
+     * Add ticket
+     *
+     * @param \LG\SaleBundle\Entity\Ticket $ticket
+     *
+     * @return Booking
+     */
+    public function addTicket(\LG\SaleBundle\Entity\Ticket $ticket)
+    {
+        $this->tickets[] = $ticket;
+
+        $ticket->setBooking($this);
+
+        return $this;
+    }
+
+    /**
+     * Remove ticket
+     *
+     * @param \LG\SaleBundle\Entity\Ticket $ticket
+     */
+    public function removeTicket(\LG\SaleBundle\Entity\Ticket $ticket)
+    {
+        $this->tickets->removeElement($ticket);
+    }
+
+    /**
+     * Get tickets
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTickets()
+    {
+        return $this->tickets;
     }
 }

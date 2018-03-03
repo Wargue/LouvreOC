@@ -2,6 +2,7 @@
 
 namespace LG\SaleBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -70,6 +71,7 @@ class Booking
     public function __construct()
     {
         $this->bookingDate = new \DateTime();
+        $this->tickets = new ArrayCollection();
     }
 
 

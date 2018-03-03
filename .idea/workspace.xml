@@ -4,7 +4,6 @@
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,9 +62,11 @@
       <file leaf-file-name="Booking.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#88#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -269,7 +270,7 @@
       <workItem from="1519754617128" duration="9018000" />
       <workItem from="1519839612220" duration="1000" />
       <workItem from="1519839695933" duration="5383000" />
-      <workItem from="1520088523662" duration="3438000" />
+      <workItem from="1520088523662" duration="3872000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -334,11 +335,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520090444925</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Setting up the bidirectional relationship between Booking and Ticket">
+      <created>1520092016437</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1520092016437</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33297000" />
+    <option name="totallyTimeSpent" value="33731000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,7 +396,8 @@
     <MESSAGE value="Ticket entity Creation - And Rename the repository" />
     <MESSAGE value="Booking entity Creation" />
     <MESSAGE value="add $bookingDate" />
-    <option name="LAST_COMMIT_MESSAGE" value="add $bookingDate" />
+    <MESSAGE value="Setting up the bidirectional relationship between Booking and Ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up the bidirectional relationship between Booking and Ticket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -741,9 +750,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="374">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#88#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

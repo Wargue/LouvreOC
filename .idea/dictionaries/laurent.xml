@@ -3,7 +3,9 @@
     <words>
       <w>nationalite</w>
       <w>prenom</w>
+      <w>réservation</w>
       <w>tarif</w>
+      <w>tarifs</w>
     </words>
   </dictionary>
 </component>

@@ -50,6 +50,10 @@ class Ticket
      */
     private $booking;
 
+    public function __construct()
+    {
+        $this->tarif = 20;
+    }
 
 
     /**

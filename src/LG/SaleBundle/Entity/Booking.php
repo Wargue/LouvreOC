@@ -28,6 +28,14 @@ class Booking
      */
     private $visitDate;
 
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="bookingDate", type="datetime")
+     */
+    private $bookingDate;
+
     /**
      * @var string
      *
@@ -155,5 +163,28 @@ class Booking
     {
         return $this->totalPrice;
     }
-}
 
+    /**
+     * Set bookingDate
+     *
+     * @param \DateTime $bookingDate
+     *
+     * @return Booking
+     */
+    public function setBookingDate($bookingDate)
+    {
+        $this->bookingDate = $bookingDate;
+
+        return $this;
+    }
+
+    /**
+     * Get bookingDate
+     *
+     * @return \DateTime
+     */
+    public function getBookingDate()
+    {
+        return $this->bookingDate;
+    }
+}

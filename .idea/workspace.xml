@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Repository/BookingRepository.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +62,8 @@
       <file leaf-file-name="Booking.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-2174">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Repository/UserRepository.php" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
       </list>
     </option>
   </component>
@@ -268,7 +268,7 @@
       <workItem from="1519754617128" duration="9018000" />
       <workItem from="1519839612220" duration="1000" />
       <workItem from="1519839695933" duration="5383000" />
-      <workItem from="1520088523662" duration="1440000" />
+      <workItem from="1520088523662" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -319,11 +319,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520089438838</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Booking entity Creation">
+      <created>1520089977990</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1520089977990</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31299000" />
+    <option name="totallyTimeSpent" value="31742000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +378,8 @@
     <MESSAGE value="grammar correction" />
     <MESSAGE value="User entity creation" />
     <MESSAGE value="Ticket entity Creation - And Rename the repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ticket entity Creation - And Rename the repository" />
+    <MESSAGE value="Booking entity Creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking entity Creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -724,8 +732,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-2174">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>

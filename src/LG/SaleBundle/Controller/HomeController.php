@@ -6,6 +6,7 @@ namespace LG\SaleBundle\Controller;
 
 use LG\SaleBundle\Entity\Booking;
 use LG\SaleBundle\Entity\Ticket;
+use LG\SaleBundle\Form\BookingType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,36 +34,28 @@ class HomeController extends Controller
      */
     public function priceAction(Request $request)
     {
-        $ticket = new Ticket();
+        $form=$this->createForm(BookingType::class);
 
-        $form = $this->get('form.factory')->createBuilder(FormType::class, $ticket)
-            ->add('nom',                    TextType::class)
-            ->add('prenom',                 TextType::class)
-            ->add('nationalite',            TextType::class)
-            ->add('birthday',               DateType::class)
-            ->add('save',                   SubmitType::class)
-            ->getForm();
-            ;
+        if ($form->isSubmitted()) {
 
-        // Si la requête est en POST
-        if ($request->isMethod('POST')) {
-            // On fait le lien Requête <-> Formulaire
-            // À partir de maintenant, la variable $advert contient les valeurs entrées dans le formulaire par le visiteur
             $form->handleRequest($request);
 
-            // On vérifie que les valeurs entrées sont correctes
-            // (Nous verrons la validation des objets en détail dans le prochain chapitre)
-            if ($form->isValid()) {
-                // On enregistre notre objet $advert dans la base de données, par exemple
+            $booking=$form->getData();
+            /**
+             * Foreach.....
+             */
+
+
+                //Partie à retravailler => Créer les validations
                 $em = $this->getDoctrine()->getManager();
-                $em->persist($ticket);
+                $em->persist($booking);
                 $em->flush();
 
                 $request->getSession()->getFlashBag()->add('notice', 'Réservation enregistrée');
 
-                // On redirige vers la page de visualisation de l'annonce nouvellement créée
-                return $this->redirectToRoute('home', array('id' => $ticket->getId()));
-            }
+                //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
+                // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
+                return $this->redirectToRoute('home', array('id' => $booking->getId()));
         }
 
         return $this->render('LGSaleBundle:Sale:selling.html.twig', array(

@@ -36,14 +36,13 @@ class HomeController extends Controller
     {
         $form=$this->createForm(BookingType::class);
 
-        if ($form->isSubmitted()) {
+        $form->handleRequest($request);
 
-            $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid())  {
+
+
 
             $booking=$form->getData();
-            /**
-             * Foreach.....
-             */
 
 
                 //Partie à retravailler => Créer les validations

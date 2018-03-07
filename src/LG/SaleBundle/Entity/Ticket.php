@@ -45,7 +45,7 @@ class Ticket
     private $birthday;
 
     /**
-     * @ORM\ManyToOne(targetEntity="LG\SaleBundle\Entity\Booking", inversedBy="tickets")
+     * @ORM\ManyToOne(targetEntity="LG\SaleBundle\Entity\Booking", inversedBy="tickets", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $booking;

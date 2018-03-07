@@ -59,10 +59,9 @@ class Booking
     private $totalPrice;
 
     /**
-     * @ORM\OneToMany(targetEntity="LG\SaleBundle\Entity\Ticket", mappedBy="booking")
+     * @ORM\OneToMany(targetEntity="LG\SaleBundle\Entity\Ticket", mappedBy="booking",cascade={"persist"})
      */
     private $tickets;
-
 
 
     /**

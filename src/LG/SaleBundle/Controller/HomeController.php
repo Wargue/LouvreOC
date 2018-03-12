@@ -64,19 +64,19 @@ class HomeController extends Controller
                 /**
                  * MISE EN PLACE DU PRIX DES TICKETS SELON L AGE
                  */
-                if ($age < 4){
-                    $ticket->setTarif(0);
+                switch (true){
+                    case $age < 4:
+                        $ticket->setTarif(0);
+                        break;
+                    case $age < 12:
+                        $ticket->setTarif(8);
+                        break;
+                    case $age < 60:
+                        $ticket->setTarif(16);
+                        break;
+                    case $age >= 60:
+                        $ticket->setTarif(12);
                 }
-                elseif ($age >=4 AND $age<=11){
-                    $ticket->setTarif(8);
-                }
-                elseif ($age >=12 AND $age <= 59){
-                    $ticket->setTarif(16);
-                }
-                elseif ($age >=60){
-                    $ticket->setTarif(12);
-                }
-
                 dump($ticket->getTarif());
             }
 

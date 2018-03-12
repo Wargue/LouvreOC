@@ -78,6 +78,13 @@ class HomeController extends Controller
                         $ticket->setTarif(12);
                 }
                 dump($ticket->getTarif());
+
+                if ($ticket->getReduced()=='true'){
+                    $tarifRed = $ticket->getTarif();
+                    $ticket->setTarif($tarifRed-10);
+                }
+
+                dump($ticket->getTarif());
             }
 
 

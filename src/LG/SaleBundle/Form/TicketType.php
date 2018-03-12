@@ -25,7 +25,7 @@ class TicketType extends AbstractType
             ->add('prenom',         TextType::class)
             ->add('nationalite',    TextType::class)
             ->add('birthday',       BirthdayType::class)
-            ->add('reduced',        CheckboxType::class, array('label' => 'Avez-vous droit à un tarif réduit?'))
+            ->add('reduced',        CheckboxType::class, array('label' => 'Avez-vous droit à un tarif réduit?', 'required' => false))
             ->add('booking',        HiddenType::class)
         ;
     }/**

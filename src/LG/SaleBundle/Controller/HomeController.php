@@ -46,46 +46,7 @@ class HomeController extends Controller
 
             $booking= $form->getData();
 
-            foreach ($booking->getTickets() as $ticket)
-            {
-                /**
-                 * @var $ticket Ticket
-                 */
-                dump($ticket->getBirthday()->format('Y'));
 
-                $year = $ticket->getBirthday()->format('Y');
-
-                $now = new \DateTime();
-                $today = $now->format('Y');
-
-                $age = $today - $year;
-
-                dump($age);
-                /**
-                 * MISE EN PLACE DU PRIX DES TICKETS SELON L AGE
-                 */
-                switch (true){
-                    case $age < 4:
-                        $ticket->setTarif(0);
-                        break;
-                    case $age < 12:
-                        $ticket->setTarif(8);
-                        break;
-                    case $age < 60:
-                        $ticket->setTarif(16);
-                        break;
-                    case $age >= 60:
-                        $ticket->setTarif(12);
-                }
-                dump($ticket->getTarif());
-
-                if ($ticket->getReduced()=='true'){
-                    $tarifRed = $ticket->getTarif();
-                    $ticket->setTarif($tarifRed-10);
-                }
-
-                dump($ticket->getTarif());
-            }
 
 
             $booking->setTicketNumber();

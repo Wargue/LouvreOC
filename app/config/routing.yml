@@ -1,3 +1,8 @@
+lg_price_calc:
+    resource: "@LGPriceCalcBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 lg_sale:
     resource: "@LGSaleBundle/Controller/"
     type:     annotation

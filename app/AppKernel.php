@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new LG\SaleBundle\LGSaleBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new LG\PriceCalcBundle\LGPriceCalcBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -5,6 +5,7 @@ namespace LG\SaleBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -24,6 +25,7 @@ class TicketType extends AbstractType
             ->add('prenom',         TextType::class)
             ->add('nationalite',    TextType::class)
             ->add('birthday',       BirthdayType::class)
+            ->add('reduced',        CheckboxType::class, array('label' => 'Avez-vous droit à un tarif réduit?'))
             ->add('booking',        HiddenType::class)
         ;
     }/**

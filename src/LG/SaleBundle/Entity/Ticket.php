@@ -40,6 +40,11 @@ class Ticket
     private $tarif;
 
     /**
+     * @ORM\Column(name="reducedPrice", type="boolean")
+     */
+    private $reduced = false;
+
+    /**
      * @ORM\Column(name="birthday", type="datetime")
      */
     private $birthday;
@@ -232,5 +237,29 @@ class Ticket
     public function getBooking()
     {
         return $this->booking;
+    }
+
+    /**
+     * Set reduced
+     *
+     * @param boolean $reduced
+     *
+     * @return Ticket
+     */
+    public function setReduced($reduced)
+    {
+        $this->reduced = $reduced;
+
+        return $this;
+    }
+
+    /**
+     * Get reduced
+     *
+     * @return boolean
+     */
+    public function getReduced()
+    {
+        return $this->reduced;
     }
 }

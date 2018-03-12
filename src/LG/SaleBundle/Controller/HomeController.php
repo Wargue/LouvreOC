@@ -18,6 +18,10 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+/**
+ * Class HomeController
+ * @package LG\SaleBundle\Controller
+ */
 class HomeController extends Controller
 {
 
@@ -40,14 +44,52 @@ class HomeController extends Controller
 
         if ($form->isSubmitted() && $form->isValid())  {
 
+            $booking= $form->getData();
+
+            foreach ($booking->getTickets() as $ticket)
+            {
+                /**
+                 * @var $ticket Ticket
+                 */
+                dump($ticket->getBirthday()->format('Y'));
+
+                $year = $ticket->getBirthday()->format('Y');
+
+                $now = new \DateTime();
+                $today = $now->format('Y');
+
+                $age = $today - $year;
+
+                dump($age);
+                /**
+                 * MISE EN PLACE DU PRIX DES TICKETS SELON L AGE
+                 */
+                if ($age < 4){
+                    $ticket->setTarif(0);
+                }
+                elseif ($age >=4 AND $age<=11){
+                    $ticket->setTarif(8);
+                }
+                elseif ($age >=12 AND $age <= 59){
+                    $ticket->setTarif(16);
+                }
+                elseif ($age >=60){
+                    $ticket->setTarif(12);
+                }
+
+                dump($ticket->getTarif());
+            }
 
 
-            $booking=$form->getData();
-
-
+            $booking->setTicketNumber();
+            dump($booking->getTicketNumber());
+            die();
                 //Partie à retravailler => Créer les validations
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($booking);
+
+
+
                 $em->flush();
 
                 $request->getSession()->getFlashBag()->add('notice', 'Réservation enregistrée');

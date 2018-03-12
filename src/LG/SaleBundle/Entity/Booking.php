@@ -135,13 +135,11 @@ class Booking
     /**
      * Set ticketNumber
      *
-     * @param integer $ticketNumber
-     *
      * @return Booking
      */
-    public function setTicketNumber($ticketNumber)
+    public function setTicketNumber()
     {
-        $this->ticketNumber = $ticketNumber;
+        $this->ticketNumber = $this->getTickets()->count();
 
         return $this;
     }

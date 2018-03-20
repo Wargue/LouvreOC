@@ -4,6 +4,7 @@
 
 namespace LG\SaleBundle\Controller;
 
+use LG\SaleBundle\CalcPrice\CalcPrice;
 use LG\SaleBundle\Entity\Booking;
 use LG\SaleBundle\Entity\Ticket;
 use LG\SaleBundle\Form\BookingType;
@@ -36,7 +37,7 @@ class HomeController extends Controller
     /**
      * @route("/Reservation", name="Price")
      */
-    public function priceAction(Request $request)
+    public function priceAction(Request $request, CalcPrice $calcPrice)
     {
         $form=$this->createForm(BookingType::class);
 
@@ -47,7 +48,9 @@ class HomeController extends Controller
             $booking= $form->getData();
 
 
+        $result=($calcPrice->calculatePrice($booking));
 
+        dump($result);
 
             $booking->setTicketNumber();
             dump($booking->getTicketNumber());
@@ -55,8 +58,6 @@ class HomeController extends Controller
                 //Partie à retravailler => Créer les validations
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($booking);
-
-
 
                 $em->flush();
 

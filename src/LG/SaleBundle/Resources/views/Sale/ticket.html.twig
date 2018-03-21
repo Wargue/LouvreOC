@@ -8,12 +8,35 @@
 
 {% block lgsale_body %}
 
-{% for ticket in booking.tickets %}
-    {{ ticket.nom }}
-{% endfor %}
 
+    <div class="row" id="ticketContentDiv">
+        <div id="ticketHeaderContent" class="col-md-12">
 
+            <h1>Résumé des réservations</h1>
+        <hr>
+        </div>
 
+        <div id="ticketContentHeadear" class="col-md-12">
+            Quantité de billet(s) acheté(s) : {{ booking.TicketNumber }}<br>
+            Date de la visite :<br>
+        </div>
+        <div id="ticketContent" class="col-md-12">
+            {% for ticket in booking.tickets %}
 
+                Nom         :   {{ ticket.nom }}<br>
+                Prénom      :   {{ ticket.prenom }}<br>
+                Nationalité :   {{ ticket.nationalite }}<br>
+
+                Tarif       :   {{ ticket.tarif }} € {% if ticket.reduced == true %} (Vous avez droit aux tarifs réduits. Attention de bien emporter avec vous les documents justifiants cette réduction) {% endif %}
+            <br><br>
+            {% endfor %}
+
+            <hr>
+        </div>
+        <div id="ticketfooter" class="col-md-12">
+            <p>Total à payer : {{ booking.totalPrice }}€</p>
+            <input type="submit" class="btn btn-success" value="PAYER"/>
+        </div>
+    </div>
 
 {% endblock %}

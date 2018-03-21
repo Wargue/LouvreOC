@@ -1,0 +1,19 @@
+{% extends "LGSaleBundle::layout.html.twig" %}
+
+{% block title %}
+
+    Tickets - {{ parent() }}
+
+{% endblock %}
+
+{% block lgsale_body %}
+
+{% for ticket in booking.tickets %}
+    {{ ticket.nom }}
+{% endfor %}
+
+
+
+
+
+{% endblock %}

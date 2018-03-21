@@ -18,6 +18,7 @@ use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * Class HomeController
@@ -39,38 +40,52 @@ class HomeController extends Controller
      */
     public function priceAction(Request $request, CalcPrice $calcPrice)
     {
-        $form=$this->createForm(BookingType::class);
+        $form = $this->createForm(BookingType::class);
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid())  {
+        if ($form->isSubmitted() && $form->isValid()) {
 
-            $booking= $form->getData();
+            $booking = $form->getData();
 
 
-        $result=($calcPrice->calculatePrice($booking));
+            $result = ($calcPrice->calculatePrice($booking));
 
-        dump($result);
+            dump($result);
 
             $booking->setTicketNumber();
             dump($booking->getTicketNumber());
-            die();
-                //Partie à retravailler => Créer les validations
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($booking);
 
-                $em->flush();
+            //Partie à retravailler => Créer les validations
+            $em = $this->getDoctrine()->getManager();
 
-                $request->getSession()->getFlashBag()->add('notice', 'Réservation enregistrée');
+            $em->persist($booking);
 
-                //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
-                // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
-                return $this->redirectToRoute('home', array('id' => $booking->getId()));
+            $session = $request->getSession();
+            $session->set('booking', $booking);
+
+
+
+            //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
+            // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
+            return $this->redirectToRoute('Ticket', array('id' => $booking->getId()) );
         }
 
         return $this->render('LGSaleBundle:Sale:selling.html.twig', array(
             'form' => $form->createView(),
         ));
     }
+    /**
+     * @route("/Reservation/Ticket", name="Ticket")
+     */
+    public function ticketAction(Request $request)
+    {
+       $booking = $request->getSession()->get('booking');
+
+
+       return $this->render('LGSaleBundle:Sale:ticket.html.twig', array('booking' => $booking));
+
+    }
+
 
 }

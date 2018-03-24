@@ -59,7 +59,6 @@ class HomeController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             $em->persist($booking);
-            $em->flush();
 
             $quantity = $this ->getDoctrine()
                 ->getManager()
@@ -71,7 +70,6 @@ class HomeController extends Controller
             if ($nbVisit < 1000){
 
                 $request->getSession()->set('booking', $booking);
-
                 //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
                 // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
                 return $this->redirectToRoute('Ticket', array('id' => $booking->getId() ));

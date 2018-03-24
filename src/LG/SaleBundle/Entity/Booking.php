@@ -13,6 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Booking
 {
+
     /**
      * @var int
      *
@@ -20,6 +21,7 @@ class Booking
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
+
     private $id;
 
     /**

@@ -46,29 +46,36 @@ class HomeController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            /* On récupère les données*/
             $booking = $form->getData();
 
-
+            /*On initie le calcul*/
             $result = ($calcPrice->calculatePrice($booking));
 
-            dump($result);
 
             $booking->setTicketNumber();
-            dump($booking->getTicketNumber());
 
             //Partie à retravailler => Créer les validations
             $em = $this->getDoctrine()->getManager();
 
             $em->persist($booking);
+            $em->flush();
 
-            $session = $request->getSession();
-            $session->set('booking', $booking);
+            $quantity = $this ->getDoctrine()
+                ->getManager()
+                ->getRepository('LGSaleBundle:Ticket')
+                ->findByTicketAndBooking($booking->getVisitDate());
 
+            $nbVisit = count($quantity);
 
+            if ($nbVisit < 1000){
 
-            //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
-            // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
-            return $this->redirectToRoute('Ticket', array('id' => $booking->getId()) );
+                $request->getSession()->set('booking', $booking);
+
+                //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
+                // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
+                return $this->redirectToRoute('Ticket', array('id' => $booking->getId() ));
+            }
         }
 
         return $this->render('LGSaleBundle:Sale:selling.html.twig', array(

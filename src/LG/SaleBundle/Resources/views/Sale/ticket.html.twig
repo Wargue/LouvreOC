@@ -37,8 +37,10 @@
         </div>
         <div id="ticketfooter" class="col-md-12">
             <p>Total à payer : {{ booking.totalPrice }}€</p>
-            <input type="submit" class="btn btn-success" value="PAYER"/>
+            <a href="{{ path('order_prepare') }}"> <input type="button" value="PAYER"> </a>
         </div>
+
     </div>
 
 {% endblock %}
+

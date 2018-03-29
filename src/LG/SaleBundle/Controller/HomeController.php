@@ -80,6 +80,7 @@ class HomeController extends Controller
             'form' => $form->createView(),
         ));
     }
+
     /**
      * @route("/Reservation/Ticket", name="Ticket")
      */
@@ -90,6 +91,45 @@ class HomeController extends Controller
 
        return $this->render('LGSaleBundle:Sale:ticket.html.twig', array('booking' => $booking));
 
+    }
+
+    /**
+     * @Route("order/prepare", name="order_prepare")
+     */
+    public function prepareAction(Request $request)
+    {
+        $booking = $request->getSession()->get('booking');
+        return $this->render('LGSaleBundle:Sale:prepare.html.twig', array('booking' => $booking));
+    }
+
+    /**
+     * @Route("/checkout", name="order_checkout", methods="POST")
+     */
+    public function checkoutAction(Request $request)
+    {
+        $booking = $request->getSession()->get('booking');
+
+        \Stripe\Stripe::setApiKey("sk_test_6G5KOdv94H6JCMTaqEyPnB7s");
+
+        // Get the credit card details submitted by the form
+        $token = $_POST['stripeToken'];
+
+        // Create a charge: this will charge the user's card
+        try {
+            $charge = \Stripe\Charge::create(array(
+                "amount" => $booking->getTotalPrice()*100, // Amount in cents
+                "currency" => "eur",
+                "source" => $token,
+                "description" => "Paiement Stripe - Le Louvre"
+            ));
+            $this->addFlash("success","Bravo ça marche !");
+            return $this->redirectToRoute("Price");
+        } catch(\Stripe\Error\Card $e) {
+
+            $this->addFlash("error","Snif ça marche pas :(");
+            return $this->redirectToRoute("order_prepare");
+            // The card has been declined
+        }
     }
 
 

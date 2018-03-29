@@ -1,0 +1,38 @@
+{% extends "LGSaleBundle::layout.html.twig" %}
+
+{% block title %}
+
+    Stripe - {{ parent() }}
+
+{% endblock %}
+
+{% block lgsale_body %}
+
+<div id="wrapper">
+    <div id="container">
+        <div id="welcome">
+            <h1><span>Paiement Stripe</span> Réservation - Le Louvre</h1>
+        </div>
+
+        <div id="status">
+            <p>
+                <img id="icon-status" src="{{ asset('bundles/lgsale/css/pictures/stripe.png') }}">
+            Vous êtes sur le point d'acheter des tickets pour la somme totale de {{ booking.totalPrice }}€ !
+            <form action="{{ path('order_checkout') }}" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_FpoVvz4ECalrpszyV1QUKiL9"
+                        data-amount={{ booking.totalPrice*100 }}
+                        data-name="lg-stripe"
+                        data-description="Widget"
+                        data-locale="fr"
+                        data-currency="eur">
+                </script>
+            </form>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

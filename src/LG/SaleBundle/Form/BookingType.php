@@ -24,8 +24,8 @@ class BookingType extends AbstractType
             ->add('visitDate',      DateType::class)
             ->add('Type',ChoiceType::class, array(
                 'choices' => array(
-                    'Journée complète' => 'complete',
-                    'Demi-journée (A partir de 14h00)' => 'half'),
+                    'Journée complète' => 'Journée complète',
+                    'Demi-journée (A partir de 14h00)' => 'Demi-journée'),
                 'expanded' => true,
                 'multiple' => false
             ))

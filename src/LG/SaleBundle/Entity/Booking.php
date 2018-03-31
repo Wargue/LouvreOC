@@ -33,6 +33,14 @@ class Booking
 
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="Type", type="string", length=255)
+     */
+    private $type;
+
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="bookingDate", type="datetime")
@@ -240,4 +248,28 @@ class Booking
         return $this->tickets;
     }
 
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     *
+     * @return Booking
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
 }

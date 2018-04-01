@@ -122,11 +122,11 @@ class HomeController extends Controller
                 "source" => $token,
                 "description" => "Paiement Stripe - Le Louvre"
             ));
-            $this->addFlash("success","Bravo ça marche !");
+            $this->addFlash("notice","Bravo ça marche !");
             return $this->redirectToRoute("Price");
         } catch(\Stripe\Error\Card $e) {
 
-            $this->addFlash("error","Snif ça marche pas :(");
+            $this->addFlash("notice","Snif ça marche pas :(");
             return $this->redirectToRoute("order_prepare");
             // The card has been declined
         }

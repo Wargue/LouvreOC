@@ -21,5 +21,7 @@ class TicketRepository extends \Doctrine\ORM\EntityRepository
         return $query
             ->getQuery()
             ->getResult();
+
+       /* SELECT SUM(`ticketNumber`) FROM booking WHERE `visitDate` = '2018-03-25'*/
     }
 }

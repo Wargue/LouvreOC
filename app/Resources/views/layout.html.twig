@@ -8,22 +8,21 @@
     {% stylesheets filter='cssrewrite'
         'bundles/lgsale/css/main.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap-datetimepicker-standalone.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
     {% endstylesheets %}
 
     <title>{% block title %}LG Sale{% endblock %}</title>
 
     {% block stylesheets %}
         {# Bootstrap download #}
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
     {% endblock %}
 </head>
 
 <body>
 <div class="container">
 
-    {# Download menu for each pages #}
     <div class="row">
         <div id="menu" class="col-md-12">
             <nav class="navbar navbar-inverse">
@@ -48,9 +47,14 @@
         </div>
     </div>
 
-    {# Where you can put the content #}
+
     <div class="row">
         <div id="content" class="col-md-12">
+            {% for message in app.flashes('notice') %}
+                <div class="alert alert-notice">
+                    {{ message }}
+                </div>
+            {% endfor %}
             {% block body %}
             {% endblock %}
         </div>
@@ -63,15 +67,10 @@
 </div>
 
 {% block javascripts %}
-    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{{ asset("js/addTickets.js") }}"></script>
     <script src="{{ asset("js/datepicker.js") }}"></script>
-    <script type="text/javascript" charset="utf8" src="{{ asset('assets/js/jquery-3.1.1.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="{{ asset('assets/js/bootstrap-datetimepicker.min.js') }}"></script>
-
 {% endblock %}
 
 </body>

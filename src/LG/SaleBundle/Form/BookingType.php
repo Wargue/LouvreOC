@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
@@ -21,7 +22,14 @@ class BookingType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('visitDate',      DateType::class)
+            ->add('Date',      DateType::class, array(
+                'required' => true,
+                'widget' => 'single_text',
+                'attr' => [
+                    'class' => 'js-datepicker',
+                    'html5' => false,
+                ]
+            ))
             ->add('Type',ChoiceType::class, array(
                 'choices' => array(
                     'Journée complète' => 'Journée complète',
@@ -50,5 +58,6 @@ class BookingType extends AbstractType
         return 'lg_salebundle_booking';
     }
 
-
 }
+
+

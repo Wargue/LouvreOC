@@ -4,6 +4,7 @@
 
 namespace LG\SaleBundle\Controller;
 
+
 use LG\SaleBundle\CalcPrice\CalcPrice;
 use LG\SaleBundle\Entity\Booking;
 use LG\SaleBundle\Entity\Ticket;
@@ -20,6 +21,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Session\Session;
+use LG\SaleBundle\Repository\BookingRepository;
 
 /**
  * Class HomeController
@@ -66,13 +68,13 @@ class HomeController extends Controller
                 ->getRepository('LGSaleBundle:Booking')
                 ->findByBooking($booking->getVisitDate());
 
+            dump($quantity);
 
             if ($quantity < 1000){
-
                 $request->getSession()->set('booking', $booking);
-                //Partie à retravailler => créer la vue / Utiliser Javascript pour changer le contenu de la
                 // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
                 return $this->redirectToRoute('Ticket', array('id' => $booking->getId() ));
+
             }
         }
 
@@ -88,8 +90,36 @@ class HomeController extends Controller
     {
        $booking = $request->getSession()->get('booking');
 
-
        return $this->render('LGSaleBundle:Sale:ticket.html.twig', array('booking' => $booking));
+
+    }
+
+    /**
+     * @Route("order/prepare", name="order_prepare")
+     */
+    public function prepareAction(Request $request)
+    {
+        $booking = $request->getSession()->get('booking');
+        return $this->render('LGSaleBundle:Sale:prepare.html.twig', array('booking' => $booking));
+    }
+
+    /**
+     * @Route("/checkout", name="order_checkout", methods="POST")
+     */
+    public function stripeCheckout(Stripe $stripe, Request $request){
+
+        $stripePay = $stripe->checkoutAction($request);
+
+        if ($stripePay){
+
+            $this->addFlash("notice","Bravo ça marche !");
+
+            return $this->redirectToRoute("Price");
+        }
+
+        $this->addFlash("notice",$stripePay);
+        return $this->redirectToRoute("order_prepare");
+        // The card has been declined
 
     }
 

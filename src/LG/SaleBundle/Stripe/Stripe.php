@@ -3,28 +3,20 @@
 
 namespace LG\SaleBundle\Stripe;
 
-use LG\SaleBundle\Entity\Booking;
-use LG\SaleBundle\Entity\Ticket;
-use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class Stripe
 {
-    /**
-     * @Route("order/prepare", name="order_prepare")
-     */
-    public function prepareAction(Request $request, Booking $booking)
+    private $session;
+
+    public function __construct(SessionInterface $session)
     {
-        $booking = $request->getSession()->get('booking');
-        return $this->render('LGSaleBundle:Sale:prepare.html.twig', array('booking' => $booking));
+        $this-> session = $session;
     }
 
-    /**
-     * @Route("/checkout", name="order_checkout", methods="POST")
-     */
-    public function checkoutAction(Request $request, Booking $booking)
+    public function checkoutAction()
     {
-        $booking = $request->getSession()->get('booking');
+        $booking = $this->session->get('booking');
 
         \Stripe\Stripe::setApiKey("sk_test_6G5KOdv94H6JCMTaqEyPnB7s");
 
@@ -39,14 +31,12 @@ class Stripe
                 "source" => $token,
                 "description" => "Paiement Stripe - Le Louvre"
             ));
-            $this->addFlash("notice","Bravo ça marche !");
-            $em->flush($booking);
-            return $this->redirectToRoute("Price");
+
+          return true;
+
         } catch(\Stripe\Error\Card $e) {
 
-            $this->addFlash("notice","Snif ça marche pas :(");
-            return $this->redirectToRoute("order_prepare");
-            // The card has been declined
+            return $e->getMessage();
         }
 
 

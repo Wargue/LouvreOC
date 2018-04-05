@@ -3,6 +3,8 @@
 namespace LG\SaleBundle\Repository;
 
 
+use LG\SaleBundle\Entity\Booking;
+
 class BookingRepository extends \Doctrine\ORM\EntityRepository
 {
 
@@ -17,7 +19,13 @@ class BookingRepository extends \Doctrine\ORM\EntityRepository
         return $query
             ->getQuery()
             ->getSingleScalarResult();
+    }
 
+    public function totalTicketByDate(Booking $booking)
+    {
+        $total = $booking->getTicketNumber();
+        $totalByDate = $this->findByBooking($booking->getVisitDate());
+        return $total + $totalByDate;
     }
 
 }

@@ -55,7 +55,6 @@ class CalcPrice
             $totprice = $totprice + $ticket->getTarif();
         }
         $booking->setTotalPrice($totprice);
-        return $ticket;
     }
 }
 

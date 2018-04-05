@@ -29,6 +29,7 @@ use LG\SaleBundle\Repository\BookingRepository;
  */
 class HomeController extends Controller
 {
+    const MAXBILLET = 1000;
 
     /**
      * @route("/", name="home")
@@ -53,31 +54,23 @@ class HomeController extends Controller
             $booking = $form->getData();
 
             /*On initie le calcul*/
-            $result = ($calcPrice->calculatePrice($booking));
-
+            $calcPrice->calculatePrice($booking);
 
             $booking->setTicketNumber();
 
-            //Partie à retravailler => Créer les validations
-            $em = $this->getDoctrine()->getManager();
-
-            $em->persist($booking);
+            //Partie à retravailler => Créer les validations!!!!!!!!!
 
             $quantity = $this ->getDoctrine()
                 ->getManager()
                 ->getRepository('LGSaleBundle:Booking')
-                ->findByBooking($booking->getVisitDate());
+                ->totalTicketByDate($booking);
 
-            dump($quantity);
-
-            if ($quantity < 1000){
+            if ($quantity < self::MAXBILLET){
                 $request->getSession()->set('booking', $booking);
                 // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
                 return $this->redirectToRoute('Ticket', array('id' => $booking->getId() ));
-
             }
         }
-
         return $this->render('LGSaleBundle:Sale:selling.html.twig', array(
             'form' => $form->createView(),
         ));
@@ -111,6 +104,11 @@ class HomeController extends Controller
         $stripePay = $stripe->checkoutAction($request);
 
         if ($stripePay){
+
+            $booking = $request->getSession()->get('booking');
+            $em = $this->getDoctrine()->getManager();
+            $em ->persist($booking);
+            $em ->flush();
 
             $this->addFlash("notice","Bravo ça marche !");
 

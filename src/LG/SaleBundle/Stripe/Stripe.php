@@ -35,7 +35,6 @@ class Stripe
           return true;
 
         } catch(\Stripe\Error\Card $e) {
-
             return $e->getMessage();
         }
 

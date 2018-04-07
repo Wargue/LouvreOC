@@ -27,20 +27,29 @@ class BookingType extends AbstractType
                 'widget' => 'single_text',
                 'html5' => false,
                 'format' => 'dd-MM-yyyy',
+                'label' => 'Date de visite',
                 'attr' => [
                     'class' => 'js-datepicker',
                     'data-provide' => 'datepicker',
-
+                    'placeholder' => 'Cliquez ici pour choisir une date',
                 ]
+
             ))
             ->add('Type',ChoiceType::class, array(
                 'choices' => array(
                     'Journée complète' => 'Journée complète',
                     'Demi-journée (A partir de 14h00)' => 'Demi-journée'),
                 'expanded' => true,
-                'multiple' => false
+                'multiple' => false,
+                'label' => 'Type de réservation'
             ))
-            ->add('contactMail',    EmailType::class)
+            ->add('contactMail',    EmailType::class, array(
+                'label' => "Adresse mail de contact",
+                'attr' => [
+                    'placeholder' => 'Votre adresse mail'
+                ]
+
+            ))
             ->add('tickets', CollectionType::class, ["entry_type"=>TicketType::class, "allow_add"=>true, "by_reference"=>false])
         ;
     }/**

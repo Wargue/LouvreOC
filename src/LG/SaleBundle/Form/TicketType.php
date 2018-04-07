@@ -24,8 +24,16 @@ class TicketType extends AbstractType
     {
         $countries = Intl::getRegionBundle()->getCountryNames();
         $builder
-            ->add('nom',            TextType::class)
-            ->add('prenom',         TextType::class)
+            ->add('nom',            TextType::class, array(
+                'attr' => [
+                    'placeholder' => 'Votre nom'
+                ]
+            ))
+            ->add('prenom',         TextType::class, array(
+                'attr' => [
+                    'placeholder' => 'Votre prénom'
+                ]
+            ))
             ->add('nationalite',    ChoiceType::class, array(
                 'choices' => array_flip($countries),
                 'label'=>'Pays'

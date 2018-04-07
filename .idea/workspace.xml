@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +59,8 @@
       <file leaf-file-name="TicketType.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="323">
+              <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
               <folding>
                 <element signature="e#39#79#0#PHP" expanded="true" />
               </folding>
@@ -70,8 +71,8 @@
       <file leaf-file-name="BookingType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="493">
+              <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="49" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -117,7 +118,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/bundles/lgsale/css/main.css" />
         <option value="$PROJECT_DIR$/web/js/datepicker.js" />
-        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Repository/TicketRepository.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/ticket.html.twig" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Stripe/Stripe.php" />
@@ -129,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" />
       </list>
     </option>
@@ -316,7 +317,7 @@
       <workItem from="1522772199758" duration="6153000" />
       <workItem from="1522862378521" duration="4709000" />
       <workItem from="1522945479058" duration="6610000" />
-      <workItem from="1523080854524" duration="3351000" />
+      <workItem from="1523080854524" duration="4451000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -598,11 +599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523082906284</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add country in the form">
+      <created>1523084247084</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1523084247084</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159203000" />
+    <option name="totallyTimeSpent" value="160303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,8 +630,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18882681" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29211086" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18882681" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29211086" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
@@ -692,7 +700,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="setting the price according to age" />
     <MESSAGE value="set up BirthdayType" />
     <MESSAGE value="set up switch-case" />
     <MESSAGE value="add hiddenType for booking" />
@@ -717,7 +724,8 @@
     <MESSAGE value="Delete useless javascript link" />
     <MESSAGE value="add data-label =&gt; Stripe to change the label of the blue button" />
     <MESSAGE value="first step validation form" />
-    <option name="LAST_COMMIT_MESSAGE" value="first step validation form" />
+    <MESSAGE value="add country in the form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add country in the form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1010,15 +1018,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="493">
+          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="49" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="323">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
           <folding>
             <element signature="e#39#79#0#PHP" expanded="true" />
           </folding>

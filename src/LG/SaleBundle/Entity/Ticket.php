@@ -3,6 +3,7 @@
 namespace LG\SaleBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * ticket
@@ -21,11 +22,13 @@ class Ticket
 
     /**
      * @ORM\Column(name="nom", type="string", length=255)
+     * @Assert\Length(min=2, minMessage="Attention ! Le nom doit faire au minimum {{ limit }} caractères.")
      */
     private $nom;
 
     /**
      * @ORM\Column(name="prenom", type="string", length=255)
+     * @Assert\Length(min=2, minMessage="Attention ! Le prénom doit faire au minimum {{ limit }} caractères.")
      */
     private $prenom;
 
@@ -46,6 +49,7 @@ class Ticket
 
     /**
      * @ORM\Column(name="birthday", type="datetime")
+     * @Assert\DateTime()
      */
     private $birthday;
 

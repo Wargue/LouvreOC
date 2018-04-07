@@ -4,6 +4,7 @@ namespace LG\SaleBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Booking
@@ -28,6 +29,7 @@ class Booking
      * @var \DateTime
      *
      * @ORM\Column(name="visitDate", type="datetime")
+     * @Assert\DateTime()
      */
     private $visitDate;
 
@@ -35,7 +37,7 @@ class Booking
     /**
      * @var string
      *
-     * @ORM\Column(name="Type", type="string", length=255)
+     * @ORM\Column(name="Type", type="string", length=50)
      */
     private $type;
 
@@ -44,6 +46,7 @@ class Booking
      * @var \DateTime
      *
      * @ORM\Column(name="bookingDate", type="datetime")
+     * @Assert\DateTime()
      */
     private $bookingDate;
 
@@ -51,6 +54,7 @@ class Booking
      * @var string
      *
      * @ORM\Column(name="contactMail", type="string", length=255)
+     * @Assert\Email()
      */
     private $contactMail;
 

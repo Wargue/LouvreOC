@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/laurent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/laurent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,28 +33,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
+      <file leaf-file-name="Booking.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="425">
+              <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
               <folding>
-                <element signature="e#97#135#0#PHP" expanded="true" />
-                <element signature="e#1130#1238#0#PHP" />
-                <element signature="e#1304#2477#0#PHP" />
-                <element signature="e#2551#2766#0#PHP" />
-                <element signature="e#2841#3058#0#PHP" />
-                <element signature="e#3146#3747#0#PHP" />
+                <element signature="e#40#88#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prepare.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig">
+      <file leaf-file-name="Ticket.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="391">
+              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+              <folding>
+                <element signature="e#40#72#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,7 +90,6 @@
         <option value="$PROJECT_DIR$/web/js/addTickets.js" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/web/js/submit.js" />
-        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/PriceCalc/PriceCalc.php" />
         <option value="$PROJECT_DIR$/src/LG/PriceCalcBundle/CalcPrice/CalcPrice.php" />
@@ -99,7 +98,6 @@
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/bundles/lgsale/css/main.css" />
-        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
         <option value="$PROJECT_DIR$/web/js/datepicker.js" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Repository/TicketRepository.php" />
@@ -111,6 +109,8 @@
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" />
       </list>
     </option>
   </component>
@@ -210,26 +210,7 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Sale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -308,7 +289,7 @@
       <workItem from="1522772199758" duration="6153000" />
       <workItem from="1522862378521" duration="4709000" />
       <workItem from="1522945479058" duration="6610000" />
-      <workItem from="1523080854524" duration="698000" />
+      <workItem from="1523080854524" duration="1842000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -576,11 +557,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523081479973</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add data-label =&gt; Stripe to change the label of the blue button">
+      <created>1523081649407</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1523081649407</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156550000" />
+    <option name="totallyTimeSpent" value="157694000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -600,7 +588,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.18882681" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18882681" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29211086" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
@@ -670,7 +658,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Form insertion / Javascript for the form" />
     <MESSAGE value="Delete JS for the form,&#10;Add the submit button inside the form with form_start and form_end&#10;prepare the controller" />
     <MESSAGE value="setting the price according to age" />
     <MESSAGE value="set up BirthdayType" />
@@ -695,7 +682,8 @@
     <MESSAGE value="Improvement and storage of part of the code" />
     <MESSAGE value="Improvement of the datepicker ( delete date before today)" />
     <MESSAGE value="Delete useless javascript link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete useless javascript link" />
+    <MESSAGE value="add data-label =&gt; Stripe to change the label of the blue button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add data-label =&gt; Stripe to change the label of the blue button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -805,13 +793,6 @@
     <entry file="file://$PROJECT_DIR$/src/LG/PriceCalcBundle/Resources/views/Default/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/LG/PriceCalcBundle/Resources/config/services.yml" />
     <entry file="file://$PROJECT_DIR$/src/LG/PriceCalcBundle/Controller/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -858,13 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -972,9 +946,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="270">
           <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
           <folding>
             <element signature="e#97#135#0#PHP" expanded="true" />
@@ -987,10 +968,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="425">
+          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#40#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

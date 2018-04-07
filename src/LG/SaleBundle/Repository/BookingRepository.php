@@ -8,6 +8,12 @@ use LG\SaleBundle\Entity\Booking;
 class BookingRepository extends \Doctrine\ORM\EntityRepository
 {
 
+    /**
+     * @param $date
+     * @return mixed
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function findByBooking($date)
     {
         $query = $this->getEntityManager()->createQueryBuilder();
@@ -21,6 +27,12 @@ class BookingRepository extends \Doctrine\ORM\EntityRepository
             ->getSingleScalarResult();
     }
 
+    /**
+     * @param Booking $booking
+     * @return int|mixed
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function totalTicketByDate(Booking $booking)
     {
         $total = $booking->getTicketNumber();

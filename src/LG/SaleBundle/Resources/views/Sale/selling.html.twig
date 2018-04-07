@@ -47,7 +47,9 @@
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.fr.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
      <script>
+
         $(document).ready(function() {
 
             $('.js-datepicker').datepicker(
@@ -56,10 +58,18 @@
                     daysOfWeekDisabled: [2],
                     autoclose: true,
                     todayHighlight: true,
-                    format: 'dd-mm-yyyy'
+                    format: 'dd-mm-yyyy',
+                    datesDisabled: ['01/01/2018', '01/05/2018','08/05/2018','14/07/2018','15/08/2018','01/11/2018','11/11/2018','25/12/2018'],
+                    startDate: date
 
-                });
-        });
+            });
+         });
+
+        var date = new Date();
+        date.setDate(date.getDate());
+
+
+
     </script>
 
 {% endblock %}

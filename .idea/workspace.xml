@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/laurent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/laurent.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
+              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
               <folding>
                 <element signature="e#40#88#0#PHP" expanded="true" />
               </folding>
@@ -45,14 +43,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ticket.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ticket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+              <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
               <folding>
                 <element signature="e#40#72#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketType.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#39#79#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookingType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -90,7 +109,6 @@
         <option value="$PROJECT_DIR$/web/js/addTickets.js" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/web/js/submit.js" />
-        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/PriceCalc/PriceCalc.php" />
         <option value="$PROJECT_DIR$/src/LG/PriceCalcBundle/CalcPrice/CalcPrice.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
@@ -111,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/prepare.html.twig" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" />
       </list>
     </option>
   </component>
@@ -212,6 +231,14 @@
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -289,7 +316,7 @@
       <workItem from="1522772199758" duration="6153000" />
       <workItem from="1522862378521" duration="4709000" />
       <workItem from="1522945479058" duration="6610000" />
-      <workItem from="1523080854524" duration="1842000" />
+      <workItem from="1523080854524" duration="3351000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -564,11 +591,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523081649407</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="first step validation form">
+      <created>1523082906284</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1523082906284</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157694000" />
+    <option name="totallyTimeSpent" value="159203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,7 +692,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete JS for the form,&#10;Add the submit button inside the form with form_start and form_end&#10;prepare the controller" />
     <MESSAGE value="setting the price according to age" />
     <MESSAGE value="set up BirthdayType" />
     <MESSAGE value="set up switch-case" />
@@ -683,7 +716,8 @@
     <MESSAGE value="Improvement of the datepicker ( delete date before today)" />
     <MESSAGE value="Delete useless javascript link" />
     <MESSAGE value="add data-label =&gt; Stripe to change the label of the blue button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add data-label =&gt; Stripe to change the label of the blue button" />
+    <MESSAGE value="first step validation form" />
+    <option name="LAST_COMMIT_MESSAGE" value="first step validation form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -888,13 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Repository/BookingRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -905,13 +932,6 @@
             <element signature="e#737#905#0#PHP" />
             <element signature="e#579#797#0#PHP" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -971,7 +991,7 @@
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Booking.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="e#40#88#0#PHP" expanded="true" />
           </folding>
@@ -981,9 +1001,26 @@
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
           <folding>
             <element signature="e#40#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#39#79#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

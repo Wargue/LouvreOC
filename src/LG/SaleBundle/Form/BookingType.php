@@ -13,6 +13,9 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Date;
+use Symfony\Component\Validator\Constraints\DateTime;
+use Symfony\Component\Validator\Constraints\Time;
 
 class BookingType extends AbstractType
 {
@@ -21,6 +24,7 @@ class BookingType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
             ->add('visitDate',      DateType::class, array(
                 'required' => true,
@@ -68,6 +72,15 @@ class BookingType extends AbstractType
     public function getBlockPrefix()
     {
         return 'lg_salebundle_booking';
+    }
+
+    public function dayChoice(){
+        $now = new DateTime();
+        $date = new Date();
+        $limit = date_time_set( $date, 14, 00, 00);
+        if ($now > $limit){
+            return false;
+        }
     }
 
 }

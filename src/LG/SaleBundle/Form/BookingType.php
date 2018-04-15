@@ -40,9 +40,7 @@ class BookingType extends AbstractType
 
             ))
             ->add('Type',ChoiceType::class, array(
-                'choices' => array(
-                    'Journée complète' => 'Journée complète',
-                    'Demi-journée (A partir de 14h00)' => 'Demi-journée'),
+                'choices' => $this->dayChoice(),
                 'expanded' => true,
                 'multiple' => false,
                 'label' => 'Type de réservation'
@@ -75,12 +73,16 @@ class BookingType extends AbstractType
     }
 
     public function dayChoice(){
-        $now = new DateTime();
-        $date = new Date();
-        $limit = date_time_set( $date, 14, 00, 00);
-        if ($now > $limit){
-            return false;
+
+        $date = date('H');
+
+        $day = ['Demi-journée (A partir de 14h00)' => 'Demi-journée'];
+
+        if (14>$date){
+            $day = ['Journée complète' => 'Journée complète', 'Demi-journée (A partir de 14h00)' => 'Demi-journée'];
         }
+
+        return $day;
     }
 
 }

@@ -9,6 +9,7 @@ use LG\SaleBundle\CalcPrice\CalcPrice;
 use LG\SaleBundle\Entity\Booking;
 use LG\SaleBundle\Entity\Ticket;
 use LG\SaleBundle\Form\BookingType;
+use LG\SaleBundle\SendMailer\SendMailer;
 use LG\SaleBundle\Stripe\Stripe;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -34,8 +35,11 @@ class HomeController extends Controller
     /**
      * @route("/", name="home")
      */
-    public function indexAction()
+    public function indexAction(SendMailer $mailer)
     {
+        $date = date('H');
+
+        dump($date);
         return $this->render('LGSaleBundle:Sale:index.html.twig');
     }
 
@@ -99,9 +103,9 @@ class HomeController extends Controller
     /**
      * @Route("/checkout", name="order_checkout", methods="POST")
      */
-    public function stripeCheckout(Stripe $stripe, Request $request){
+    public function stripeCheckout(Stripe $stripe, Request $request, SendMailer $mailer){
 
-        $stripePay = $stripe->checkoutAction($request);
+        $stripePay = $stripe->checkoutAction($request->get('stripeToken'));
 
         if ($stripePay){
 
@@ -112,13 +116,14 @@ class HomeController extends Controller
 
             $this->addFlash("notice","Bravo ça marche !");
 
+
+
             return $this->redirectToRoute("Price");
         }
 
         $this->addFlash("notice",$stripePay);
         return $this->redirectToRoute("order_prepare");
         // The card has been declined
-
     }
 
 }

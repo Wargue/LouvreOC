@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Mailer/Mailer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Stripe/Stripe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Stripe/Stripe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,39 +32,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BookingType.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
+      <file leaf-file-name="SendMailer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="170">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#39#79#0#PHP" expanded="true" />
-                <element signature="e#838#2047#0#PHP" />
-                <element signature="e#2307#2391#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TicketType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding>
-                <element signature="e#39#79#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-              <folding>
-                <element signature="e#97#135#0#PHP" expanded="true" />
+                <element signature="e#235#406#0#PHP" />
+                <element signature="e#435#546#0#PHP" />
+                <element signature="e#552#971#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -129,11 +100,11 @@
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/Mailer.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Stripe/Stripe.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php" />
+        <option value="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php" />
       </list>
     </option>
   </component>
@@ -238,7 +209,7 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
@@ -246,7 +217,7 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SendMailer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -327,7 +298,7 @@
       <workItem from="1522945479058" duration="6610000" />
       <workItem from="1523080854524" duration="9020000" />
       <workItem from="1523465787922" duration="10265000" />
-      <workItem from="1523779959859" duration="920000" />
+      <workItem from="1523779959859" duration="1177000" />
     </task>
     <task id="LOCAL-00001" summary="Suppresion d'un espace">
       <created>1519245175033</created>
@@ -637,11 +608,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523467297505</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Set up twig view for the mail + set up daychoice function">
+      <created>1523782257675</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1523782257675</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176057000" />
+    <option name="totallyTimeSpent" value="176314000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +708,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add reduced price checkbox" />
     <MESSAGE value="The checkbox is now functional and the calcul about the price with the reduced priced is also functional" />
     <MESSAGE value="Add PriceCalcBundle" />
     <MESSAGE value="Delete priceCalcBundle&#10;&#10;New service CalcPric Ok" />
@@ -755,11 +732,12 @@
     <MESSAGE value="add placeholders and change label from the form" />
     <MESSAGE value="add mailer service" />
     <MESSAGE value="Set up twig view for the mail and beginning of mailer class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up twig view for the mail and beginning of mailer class" />
+    <MESSAGE value="Set up twig view for the mail + set up daychoice function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up twig view for the mail + set up daychoice function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1008,23 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding>
-            <element signature="e#97#135#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1047,22 +1008,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/TicketType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="304">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="e#39#79#0#PHP" expanded="true" />
+            <element signature="e#654#1582#0#PHP" />
+            <element signature="e#1619#1798#0#PHP" />
+            <element signature="e#1841#1924#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="474">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#39#79#0#PHP" expanded="true" />
             <element signature="e#838#2047#0#PHP" />
+            <element signature="e#2084#2264#0#PHP" />
             <element signature="e#2307#2391#0#PHP" />
+            <element signature="e#2397#2704#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="e#97#135#0#PHP" expanded="true" />
+            <element signature="e#1171#1346#0#PHP" />
+            <element signature="e#1412#2585#0#PHP" />
+            <element signature="e#2659#2874#0#PHP" />
+            <element signature="e#2949#3166#0#PHP" />
+            <element signature="e#3254#3896#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#235#406#0#PHP" />
+            <element signature="e#435#546#0#PHP" />
+            <element signature="e#552#971#0#PHP" />
           </folding>
         </state>
       </provider>

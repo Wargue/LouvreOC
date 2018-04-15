@@ -19,10 +19,16 @@ class SendMailer
         $this->templating = $templating;
     }
 
+    /*
+     * mail view calling
+     */
     public function mailView(){
         return $this->templating->render('LGSaleBundle:Sale:mail.html.twig');
     }
 
+    /*
+     * mail configuration
+     */
     public function sendMail(){
 
         $view = $this->mailView();

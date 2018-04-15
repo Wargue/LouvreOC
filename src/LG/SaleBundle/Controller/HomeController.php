@@ -111,11 +111,11 @@ class HomeController extends Controller
             $em ->persist($booking);
             $em ->flush();
 
-            $mailer->sendMail();
+            $mailer->sendMail($booking);
 
             $this->addFlash("notice","Bravo ça marche !");
 
-
+            /* $code = substr(bin2hex(openssl_random_pseudo_bytes(100)), 0, 6); */
 
             return $this->redirectToRoute("Price");
         }

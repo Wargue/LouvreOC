@@ -9,8 +9,13 @@
 {% endblock %}
 
 {% block lgsale_body %}
-    <div class="row" id="HomeDivContent">
+    <div class="row" id="HomeTitle">
+        <div id="HomeTitleContent" class="col-md-12">
+            <img id="HomeTitleLogo" src="{{ asset('bundles/lgsale/css/pictures/louvre_logo.jpg') }}"/>
+        </div>
+    </div>
 
+    <div class="row" id="HomeDivContent">
         <div id="HomeContent" class="col-md-6">
             <h1>Le Louvre</h1>
             <hr/>
@@ -21,6 +26,7 @@
                 Avec 8,9 millions de visiteurs annuels en 2011, c'est le site culturel le plus visité en France devant la tour Eiffel, la cathédrale Notre-Dame de Paris étant en tête des monuments à l'accès libre avec 13,6 millions de visiteurs estimés3.
             </p>
         </div>
+
         <div id="HomeContent" class="col-md-6">
             <h1>Les Tarifs</h1>
             <hr/>

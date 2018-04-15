@@ -1,7 +1,42 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% stylesheets filter='cssrewrite'
+            'bundles/lgsale/css/mail.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        {% endstylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
     <body>
+        <img id="MailLogo" src="{{ absolute_url(asset('bundles/lgsale/css/pictures/louvre_logo.jpg') )}}"/>
         <h1>Vos réservations - Le Louvre</h1>
 
+        <div class="row" id="ticketContentDiv">
+
+            <div id="ticketContentHeadear" class="col-md-12">
+                Quantité de billet(s) acheté(s) : {{ booking.TicketNumber }}<br>
+                Date de la visite : {{ booking.visitDate|date("d/m/Y") }}<br>
+                Entrée : {{ booking.Type }}<br>
+
+                <br>
+            </div>
+            <div id="ticketContent" class="col-md-12">
+                {% for ticket in booking.tickets %}
+
+                    Ticket n° {{ loop.index }}<br>
+                    Nom         :   {{ ticket.nom }}<br>
+                    Prénom      :   {{ ticket.prenom }}<br>
+                    Nationalité :   {{ ticket.nationalite }}<br>
+
+                    Tarif       :   {{ ticket.tarif }} € {% if ticket.reduced == true %} (Vous avez droit aux tarifs réduits. Attention de bien emporter avec vous les documents justifiants cette réduction) {% endif %}
+                    <br><br>
+                {% endfor %}
+
+                <hr>
+            </div>
+        </div>
 
     </body>
 </html>

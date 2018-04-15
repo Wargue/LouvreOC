@@ -6,7 +6,6 @@ namespace LG\SaleBundle\SendMailer;
 use LG\SaleBundle\Entity\Booking;
 use LG\SaleBundle\Entity\Ticket;
 
-
 class SendMailer
 {
 
@@ -22,16 +21,18 @@ class SendMailer
     /*
      * mail view calling
      */
-    public function mailView(){
-        return $this->templating->render('LGSaleBundle:Sale:mail.html.twig');
+    public function mailView($booking){
+
+        return $this->templating->render('LGSaleBundle:Sale:mail.html.twig', array('booking' => $booking));
     }
 
     /*
      * mail configuration
      */
-    public function sendMail(){
+    public function sendMail($booking){
 
-        $view = $this->mailView();
+
+        $view = $this->mailView($booking);
 
         $message = new \Swift_Message('Confirmation de réservation - Le Louvre');
         $message

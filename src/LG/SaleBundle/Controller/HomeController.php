@@ -35,11 +35,8 @@ class HomeController extends Controller
     /**
      * @route("/", name="home")
      */
-    public function indexAction(SendMailer $mailer)
+    public function indexAction()
     {
-        $date = date('H');
-
-        dump($date);
         return $this->render('LGSaleBundle:Sale:index.html.twig');
     }
 
@@ -113,6 +110,8 @@ class HomeController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em ->persist($booking);
             $em ->flush();
+
+            $mailer->sendMail();
 
             $this->addFlash("notice","Bravo ça marche !");
 

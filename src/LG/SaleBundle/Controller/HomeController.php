@@ -59,7 +59,6 @@ class HomeController extends Controller
 
             $booking->setTicketNumber();
 
-            //Partie à retravailler => Créer les validations!!!!!!!!!
 
             $quantity = $this ->getDoctrine()
                 ->getManager()

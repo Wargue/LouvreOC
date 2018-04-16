@@ -21,18 +21,18 @@ class SendMailer
     /*
      * mail view calling
      */
-    public function mailView($booking){
+    public function mailView($booking, $code){
 
-        return $this->templating->render('LGSaleBundle:Sale:mail.html.twig', array('booking' => $booking));
+        return $this->templating->render('LGSaleBundle:Sale:mail.html.twig', array('booking' => $booking, 'code' => $code));
     }
 
     /*
      * mail configuration
      */
-    public function sendMail($booking){
+    public function sendMail($booking, $code){
 
 
-        $view = $this->mailView($booking);
+        $view = $this->mailView($booking, $code);
 
         $message = new \Swift_Message('Confirmation de réservation - Le Louvre');
         $message

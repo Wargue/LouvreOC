@@ -21,50 +21,49 @@
 </head>
 
 <body>
-<div class="container">
+    <div class="container">
 
-    <div class="row">
-        <div id="menu" class="col-md-12">
-            <nav class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+        <div class="row">
+            <div id="menu" class="col-md-12">
+                <nav class="navbar navbar-inverse">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="{{ path('home') }}">Accueil</a></li>
+                                <li><a href="{{ path('Price') }}">Tickets</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
                     </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{ path('home') }}">Accueil</a></li>
-                            <li><a href="{{ path('Price') }}">Tickets</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
-    </div>
 
-
-    <div class="row">
-        <div id="content" class="col-md-12">
-            {% for message in app.flashes('notice') %}
-                <div class="alert alert-notice">
-                    {{ message }}
-                </div>
-            {% endfor %}
-            {% block body %}
-            {% endblock %}
+        <div class="row">
+            <div id="content" class="col-md-12">
+                {% for message in app.flashes('notice') %}
+                    <div class="alert alert-notice">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {% block body %}
+                {% endblock %}
+            </div>
         </div>
+        <hr>
+        <footer>
+            <p>Better and Faster Every Day © {{ 'now'|date('Y') }} .</p>
+            <p>Natural Design By LG</p>
+        </footer>
     </div>
-    <hr>
-    <footer>
-        <p>Better and Faster Every Day © {{ 'now'|date('Y') }} .</p>
-        <p>Natural Design By LG</p>
-    </footer>
-</div>
 
 {% block javascripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

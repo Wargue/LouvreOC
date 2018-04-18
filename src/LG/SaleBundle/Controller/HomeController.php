@@ -41,7 +41,7 @@ class HomeController extends Controller
     }
 
     /**
-     * @route("/Reservation", name="Price")
+     * @route("/reservation", name="price")
      */
     public function priceAction(Request $request, CalcPrice $calcPrice)
     {
@@ -77,7 +77,7 @@ class HomeController extends Controller
     }
 
     /**
-     * @route("/Reservation/Ticket", name="Ticket")
+     * @route("/reservation/ticket", name="Ticket")
      */
     public function ticketAction(Request $request)
     {
@@ -93,6 +93,11 @@ class HomeController extends Controller
     public function prepareAction(Request $request)
     {
         $booking = $request->getSession()->get('booking');
+        if (null === $booking){
+            $this->addFlash("notice",'Aucune réservation n\'a été effectuée');
+            return $this->redirectToRoute('price');
+        }
+
         return $this->render('LGSaleBundle:Sale:prepare.html.twig', array('booking' => $booking));
     }
 
@@ -115,9 +120,9 @@ class HomeController extends Controller
 
             $this->addFlash("notice","Bravo ça marche !");
 
+            $request->getSession()->remove('booking');
 
-
-            return $this->redirectToRoute("Price");
+            return $this->redirectToRoute("price");
         }
 
         $this->addFlash("notice",$stripePay);

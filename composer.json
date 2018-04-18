@@ -14,7 +14,7 @@
         "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.0.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "incenteev/composer-parameter-handler": "^2.0",
@@ -28,7 +28,8 @@
         "symfony/assetic-bundle": "^2.7.1",
         "leafo/scssphp": "~0.6",
         "patchwork/jsqueeze": "~1.0",
-        "stripe/stripe-php": "6.*"
+        "stripe/stripe-php": "6.*",
+        "phpunit/phpunit": "6.5.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -51,9 +52,7 @@
         ]
     },
     "config": {
-        "platform": {
-            "php": "5.5.9"
-        },
+
         "sort-packages": true
     },
     "extra": {

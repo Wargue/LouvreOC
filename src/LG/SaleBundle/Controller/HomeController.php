@@ -54,23 +54,27 @@ class HomeController extends Controller
             /* On récupère les données*/
             $booking = $form->getData();
 
-            /*On initie le calcul*/
+            /* On initie le calcul*/
             $calcPrice->calculatePrice($booking);
 
+            /* On calcul le nombre de ticket*/
             $booking->setTicketNumber();
 
-
+            /* On calcul le nombre de ticket existant déjà réservés additionnés à ceux que l'on réserve en ce moment */
             $quantity = $this ->getDoctrine()
                 ->getManager()
                 ->getRepository('LGSaleBundle:Booking')
                 ->totalTicketByDate($booking);
 
+            /* On vérifie qu'il y a bien moins de 1000 tickets (considérant ceux en cours d'achat également) */
             if ($quantity < self::MAXBILLET){
                 $request->getSession()->set('booking', $booking);
-                // partie form en texte indiquant que tout a été correctement enregistrer et qu'un mail sera envoyé ?
+
+                /* Si ok, on lance le résumé et on prépare la page pour payer */
                 return $this->redirectToRoute('Ticket', array('id' => $booking->getId() ));
             }
         }
+        /* Si pas ok, on reste sur la page de formulaire pour choisir une autre date */
         return $this->render('LGSaleBundle:Sale:selling.html.twig', array(
             'form' => $form->createView(),
         ));

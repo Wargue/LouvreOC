@@ -24,9 +24,8 @@ class BookingType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder
-            ->add('visitDate',      DateType::class, array(
+            ->add('visitDate',DateType::class, array(
                 'required' => true,
                 'widget' => 'single_text',
                 'html5' => false,
@@ -37,8 +36,8 @@ class BookingType extends AbstractType
                     'data-provide' => 'datepicker',
                     'placeholder' => 'Cliquez ici pour choisir une date',
                 ]
-
             ))
+
             ->add('Type',ChoiceType::class, array(
                 'choices' => $this->dayChoice(),
                 'expanded' => true,
@@ -54,7 +53,8 @@ class BookingType extends AbstractType
             ))
             ->add('tickets', CollectionType::class, ["entry_type"=>TicketType::class, "allow_add"=>true, "by_reference"=>false])
         ;
-    }/**
+    }
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
@@ -74,11 +74,11 @@ class BookingType extends AbstractType
 
     public function dayChoice(){
 
-        $date = date('H');
+        $hour = date('H');
 
         $day = ['Demi-journée (A partir de 14h00)' => 'Demi-journée'];
 
-        if (14>$date){
+        if (14>$hour){
             $day = ['Journée complète' => 'Journée complète', 'Demi-journée (A partir de 14h00)' => 'Demi-journée'];
         }
 

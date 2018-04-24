@@ -11,7 +11,8 @@ use Symfony\Component\HTTPFoundation\Response;
 class HomeControllerTest extends WebTestCase
 {
 
-    public function testHomepageIsUp(){
+    public function testHomepageIsUp()
+    {
         $client = static::createClient();
         $crawler = $client->request(Request::METHOD_GET, '/');
 
@@ -19,5 +20,15 @@ class HomeControllerTest extends WebTestCase
 
         $this->assertSame(1, $crawler->filter('html:contains("Les Tarifs")')->count());
     }
+
+    public function testOrderPrepareWithoutBooking()
+    {
+        $client = static::createClient();
+        $client->request(Request::METHOD_GET, '/order/prepare');
+        $crawler = $client->followRedirect();
+        $this->assertSame(200, $client->getResponse()->getStatusCode());
+        $this->assertSame(1, $crawler->filter('html:contains("Aucune réservation n\'a été effectuée")')->count());
+    }
+
 
 }

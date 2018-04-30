@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,7 +49,7 @@
       <file leaf-file-name="CalcPrice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
+            <state relative-caret-position="561">
               <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#88#121#0#PHP" expanded="true" />
@@ -73,25 +68,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalcPriceTest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CalcPriceTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="228">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#131#169#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookingType.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-              <folding>
-                <element signature="e#39#79#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -418,14 +401,7 @@
       <workItem from="1524588256849" duration="3432000" />
       <workItem from="1524681979741" duration="5783000" />
       <workItem from="1524688673776" duration="76000" />
-      <workItem from="1525077607489" duration="319000" />
-    </task>
-    <task id="LOCAL-00006" summary="User entity creation">
-      <created>1519847655233</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1519847655233</updated>
+      <workItem from="1525077607489" duration="961000" />
     </task>
     <task id="LOCAL-00007" summary="Ticket entity Creation - And Rename the repository">
       <created>1520089438837</created>
@@ -763,11 +739,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524589444760</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="comments and try to put javascript for the choiceday">
+      <created>1525078137766</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1525078137766</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213171000" />
+    <option name="totallyTimeSpent" value="213813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1147,27 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#131#169#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#88#121#0#PHP" expanded="true" />
-            <element signature="e#262#308#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -1188,6 +1150,27 @@
           <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#39#79#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#88#121#0#PHP" expanded="true" />
+            <element signature="e#262#308#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#131#169#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

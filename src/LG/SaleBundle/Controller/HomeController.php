@@ -74,7 +74,7 @@ class HomeController extends Controller
                 return $this->redirectToRoute('Ticket', array('id' => $booking->getId() ));
             }
         }
-        /* Si pas ok, on reste sur la page de formulaire pour choisir une autre date */
+        /*  on reste sur la page de formulaire pour choisir une autre date */
         return $this->render('LGSaleBundle:Sale:selling.html.twig', array(
             'form' => $form->createView(),
         ));

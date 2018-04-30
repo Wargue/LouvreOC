@@ -67,14 +67,36 @@
         date.setDate(date.getDate());
 
 
-         $(document).ready(function() {
-            var choiceDate = document.getElementById("lg_salebundle_booking_visitDate");
-            var compDate = choiceDate.value;
+         $("#lg_salebundle_booking_visitDate").change(function() {
+            var compDate = $(this).val();
             var time = date.getHours();
 
-            if (compDate === date && 14 < time){
+            var MyDateString;
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                    if (month < 10){
+                        month = "0" + month;
+                    }
+                var day = date.getDate();
+                    if (day < 10){
+                        day = "0" + day;
+                    }
 
+            MyDateString = year + "-" + month + "-" + day;
 
+            var dateEnglish = compDate.split("-");
+
+            var dateVisit = new Date(dateEnglish[2]+"-"+dateEnglish[1]+"-"+dateEnglish[0]);
+            var currentDate = new Date(MyDateString);
+            currentDate.setHours(0,0,0,0);
+            dateVisit.setHours(0,0,0,0);
+            console.log(dateVisit);
+            console.log(currentDate);
+
+            if (currentDate == dateVisit && 14 <= time){
+                var $radios = $('#lg_salebundle_booking_Type_1');
+                 $radios.prop('checked', true);
+                alert("toto")
             }
 
 

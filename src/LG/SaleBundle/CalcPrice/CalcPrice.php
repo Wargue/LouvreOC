@@ -19,8 +19,6 @@ class CalcPrice
         foreach ($booking->getTickets() as $ticket)
         {
 
-            dump($ticket->getBirthday()->format('Y'));
-
             $year = $ticket->getBirthday()->format('Y');
 
             $now = new \DateTime();
@@ -28,7 +26,6 @@ class CalcPrice
 
             $age = $today - $year;
 
-            dump($age);
             /**
              * MISE EN PLACE DU PRIX DES TICKETS SELON L AGE
              */
@@ -45,13 +42,12 @@ class CalcPrice
                 case $age >= 60:
                     $ticket->setTarif(12);
             }
-            dump($ticket->getTarif());
 
             if ($ticket->getReduced()=='true'){
                 $tarifRed = $ticket->getTarif();
                 $ticket->setTarif($tarifRed-10);
             }
-            dump($ticket->getTarif());
+
             $totprice = $totprice + $ticket->getTarif();
         }
         $booking->setTotalPrice($totprice);

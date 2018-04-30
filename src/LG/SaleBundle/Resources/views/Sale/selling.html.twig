@@ -68,10 +68,9 @@
 
 
          $("#lg_salebundle_booking_visitDate").change(function() {
-            var compDate = $(this).val();
-            var time = date.getHours();
-
-            var MyDateString;
+             var compDate = $(this).val();
+             var time = date.getHours();
+             var MyDateString;
                 var year = date.getFullYear();
                 var month = date.getMonth() + 1;
                     if (month < 10){
@@ -83,22 +82,28 @@
                     }
 
             MyDateString = year + "-" + month + "-" + day;
-
             var dateEnglish = compDate.split("-");
+            var dateVisit = dateEnglish[2]+"-"+dateEnglish[1]+"-"+dateEnglish[0];
+            var currentDate = MyDateString;
 
-            var dateVisit = new Date(dateEnglish[2]+"-"+dateEnglish[1]+"-"+dateEnglish[0]);
-            var currentDate = new Date(MyDateString);
-            currentDate.setHours(0,0,0,0);
-            dateVisit.setHours(0,0,0,0);
             console.log(dateVisit);
             console.log(currentDate);
 
             if (currentDate == dateVisit && 14 <= time){
                 var $radios = $('#lg_salebundle_booking_Type_1');
                  $radios.prop('checked', true);
-                alert("toto")
+                 document.getElementById('lg_salebundle_booking_Type_0').style.display = 'none';
+                 document.querySelector("label[for=lg_salebundle_booking_Type_0]").style.display = 'none';
+
             }
 
+            if (currentDate != dateVisit) {
+                var $radios = $('#lg_salebundle_booking_Type_1');
+                 $radios.prop('checked', false);
+                document.getElementById('lg_salebundle_booking_Type_0').style.display = 'block';
+                document.querySelector("label[for=lg_salebundle_booking_Type_0]").style.display = 'block';
+
+            }
 
          })
 

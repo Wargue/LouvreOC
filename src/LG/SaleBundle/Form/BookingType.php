@@ -39,10 +39,11 @@ class BookingType extends AbstractType
             ))
 
             ->add('Type',ChoiceType::class, array(
-                'choices' => ['Journée complète' => 'Journée complète', 'Demi-journée (A partir de 14h00)' => 'Demi-journée'],
+                'choices' => ['Journée complète' => 'entire', 'Demi-journée (A partir de 14h00)' => 'half'],
                 'expanded' => true,
                 'multiple' => false,
-                'label' => 'Type de réservation'
+                'label' => 'Type de réservation',
+
             ))
             ->add('contactMail',    EmailType::class, array(
                 'label' => "Adresse mail de contact",

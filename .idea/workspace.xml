@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0aaccb9-b0ef-47dd-b803-bcd77b2e778a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,44 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-              <folding>
-                <element signature="e#1123#1166#0#PHP" />
-                <element signature="e#1171#1279#0#PHP" />
-                <element signature="e#1285#1340#0#PHP" />
-                <element signature="e#1345#2769#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookingType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-91">
-              <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookingRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Repository/BookingRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selling.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="368">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -135,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/SendMailer/SendMailer.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/mail.html.twig" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/modal.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php" />
@@ -144,6 +109,7 @@
         <option value="$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -228,10 +194,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-58" />
-    <option name="y" value="-11" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="349" />
+    <option name="y" value="-14" />
+    <option name="width" value="974" />
+    <option name="height" value="1041" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,7 +221,14 @@
               <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
               <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
@@ -291,24 +264,6 @@
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -319,7 +274,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../monblog" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
@@ -402,14 +357,7 @@
       <workItem from="1525079126511" duration="519000" />
       <workItem from="1525079668509" duration="742000" />
       <workItem from="1525090191694" duration="2784000" />
-      <workItem from="1525099175172" duration="6060000" />
-    </task>
-    <task id="LOCAL-00010" summary="Setting up the bidirectional relationship between Booking and Ticket">
-      <created>1520092016437</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1520092016437</updated>
+      <workItem from="1525099175172" duration="7347000" />
     </task>
     <task id="LOCAL-00011" summary="add tickets = new ArrayCollection() in the construct">
       <created>1520092423216</created>
@@ -747,11 +695,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525080228497</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="set up the javascript for the visibility of the choiceType according to the date and the hour">
+      <created>1525105985232</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1525105985233</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224447000" />
+    <option name="totallyTimeSpent" value="225734000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,7 +721,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1684435" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1684435" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -775,7 +730,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26927373" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26927373" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -843,7 +798,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="datepicker corrected" />
     <MESSAGE value="set up stripe as service AND first try to correct the query for 1000 tickets" />
     <MESSAGE value="set up stripe : end and check querybuilder" />
     <MESSAGE value="Improvement and storage of part of the code" />
@@ -868,7 +822,8 @@
     <MESSAGE value="New test creation for calcPrice for child before 4" />
     <MESSAGE value="New test creation for calcPrice for senior mor than 60" />
     <MESSAGE value="New test creation for calcPrice for senior mor than 60 with reduced Price" />
-    <option name="LAST_COMMIT_MESSAGE" value="New test creation for calcPrice for senior mor than 60 with reduced Price" />
+    <MESSAGE value="set up the javascript for the visibility of the choiceType according to the date and the hour" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up the javascript for the visibility of the choiceType according to the date and the hour" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1056,13 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Repository/TicketRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1137,16 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="e#1123#1166#0#PHP" />
-            <element signature="e#1171#1279#0#PHP" />
-            <element signature="e#1285#1340#0#PHP" />
-            <element signature="e#1345#2769#0#PHP" />
-          </folding>
+        <state relative-caret-position="963">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
@@ -1164,10 +1106,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Resources/views/Sale/selling.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="306">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="e#1123#1166#0#PHP" />
+            <element signature="e#1171#1279#0#PHP" />
+            <element signature="e#1285#1340#0#PHP" />
+            <element signature="e#1345#2769#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
         </state>
       </provider>
     </entry>

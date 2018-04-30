@@ -50,7 +50,7 @@
       <file leaf-file-name="CalcPrice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="381">
               <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#88#121#0#PHP" expanded="true" />
@@ -72,11 +72,20 @@
       <file leaf-file-name="CalcPriceTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="381">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#131#169#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ticket.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3570">
+              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -254,7 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,6 +302,14 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Louvre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Louvre" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="LG" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SaleBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -318,6 +334,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,14 +420,8 @@
       <workItem from="1524681979741" duration="5783000" />
       <workItem from="1524688673776" duration="76000" />
       <workItem from="1525077607489" duration="1490000" />
-      <workItem from="1525079126511" duration="371000" />
-    </task>
-    <task id="LOCAL-00008" summary="Booking entity Creation">
-      <created>1520089977990</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1520089977990</updated>
+      <workItem from="1525079126511" duration="519000" />
+      <workItem from="1525079668509" duration="177000" />
     </task>
     <task id="LOCAL-00009" summary="add $bookingDate">
       <created>1520090444925</created>
@@ -748,11 +759,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525078897959</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="New test creation for calcPrice for senior mor than 60">
+      <created>1525079536174</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1525079536174</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214713000" />
+    <option name="totallyTimeSpent" value="215038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -767,7 +785,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3347548" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1652452" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -776,7 +794,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.44692737" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31173185" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -791,20 +809,20 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3347548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32998884" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.44692737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32998884" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -1092,13 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Tests/Controller/DefaultControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1154,9 +1165,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/Entity/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3570">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LG/SaleBundle/CalcPrice/CalcPrice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="381">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="e#88#121#0#PHP" expanded="true" />
@@ -1167,8 +1185,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/SaleBundle/CalcPrice/CalcPriceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="381">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#131#169#0#PHP" expanded="true" />
           </folding>

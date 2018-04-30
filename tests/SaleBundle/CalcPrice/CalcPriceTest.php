@@ -66,4 +66,20 @@ class CalcPriceTest extends WebTestCase
         $this->assertEquals(12,$booking->getTotalPrice());
     }
 
+    public function testCalcPriceSeniorMoreThanSixtyWithReducingPrice()
+    {
+        $booking = new Booking();
+
+        $ticket = new Ticket();
+        $birthday = new \DateTime("1955-01-27 00:00:00");
+        $ticket->setBirthday($birthday);
+        $ticket->setReduced(true);
+
+        $booking->addTicket($ticket);
+
+        $calcPrice = new CalcPrice();
+        $calcPrice->calculatePrice($booking);
+        $this->assertEquals(2,$booking->getTotalPrice());
+    }
+
 }

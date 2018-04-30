@@ -36,7 +36,7 @@ class CalcPriceTest extends WebTestCase
         $this->assertEquals(28, $booking->getTotalPrice());
     }
 
-    public function testCalcPriceChildLessThanSix()
+    public function testCalcPriceChildLessThanFour()
     {
         $booking = new Booking();
 
@@ -49,6 +49,21 @@ class CalcPriceTest extends WebTestCase
         $calcPrice = new CalcPrice();
         $calcPrice->calculatePrice($booking);
         $this->assertEquals(0,$booking->getTotalPrice());
+    }
+
+    public function testCalcPriceSeniorMoreThanSixty()
+    {
+        $booking = new Booking();
+
+        $ticket = new Ticket();
+        $birthday = new \DateTime("1955-01-27 00:00:00");
+        $ticket->setBirthday($birthday);
+
+        $booking->addTicket($ticket);
+
+        $calcPrice = new CalcPrice();
+        $calcPrice->calculatePrice($booking);
+        $this->assertEquals(12,$booking->getTotalPrice());
     }
 
 }

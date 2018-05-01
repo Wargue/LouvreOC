@@ -51,7 +51,7 @@
             <div id="content" class="col-md-12">
                 {% for message in app.flashes('notice') %}
                     <div class="alert alert-success">
-                        {{ message }}
+                        <span class="glyphicons glyphicons-thumbs-up"></span>{{ message }}
                     </div>
                 {% endfor %}
                 {% block body %}

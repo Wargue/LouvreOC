@@ -35,8 +35,9 @@ class HomeController extends Controller
     /**
      * @route("/", name="home")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $request->getSession()->remove('booking');
         return $this->render('LGSaleBundle:Sale:index.html.twig');
     }
 
@@ -44,8 +45,8 @@ class HomeController extends Controller
      * @route("/reservation", name="price")
      */
     public function priceAction(Request $request, CalcPrice $calcPrice)
-    {
-        $form = $this->createForm(BookingType::class);
+    {   $booking=new Booking();
+        $form = $this->createForm(BookingType::class, $booking);
 
         $form->handleRequest($request);
 
@@ -119,8 +120,7 @@ class HomeController extends Controller
             $em ->persist($booking);
             $em ->flush();
 
-            $code = substr(bin2hex(openssl_random_pseudo_bytes(100)), 0, 6);
-            $mailer->sendMail($booking,$code);
+            $mailer->sendMail($booking,$booking->getCode());
 
             $this->addFlash("success","Nous avons bien reçu votre réservation et nous vous en remercions. Nous vous souhaitons une excellente visite au sein de Musée du Louvre !");
 

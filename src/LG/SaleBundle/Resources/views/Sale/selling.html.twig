@@ -53,11 +53,11 @@
             $('.js-datepicker').datepicker(
                 {
                     language: "fr",
-                    daysOfWeekDisabled: [2,0],
+                    daysOfWeekDisabled: [0],
                     autoclose: true,
                     todayHighlight: true,
                     format: 'dd-mm-yyyy',
-                    datesDisabled: ['01/01/2018', '01/05/2018','08/05/2018','14/07/2018','15/08/2018','01/11/2018','11/11/2018','25/12/2018'],
+                    datesDisabled: ['01/01/2018', '08/05/2018','14/07/2018','15/08/2018','01/11/2018','11/11/2018','25/12/2018'],
                     startDate: date
 
             });
@@ -92,16 +92,15 @@
             if (currentDate == dateVisit && 14 <= time){
                 var $radios = $('#lg_salebundle_booking_Type_1');
                  $radios.prop('checked', true);
-                 document.getElementById('lg_salebundle_booking_Type_0').style.display = 'none';
-                 document.querySelector("label[for=lg_salebundle_booking_Type_0]").style.display = 'none';
-
+                 $('#lg_salebundle_booking_Type_0').css('display','none');
+                 $("label[for=lg_salebundle_booking_Type_0]").css('display','none');
             }
 
             if (currentDate != dateVisit) {
                 var $radios = $('#lg_salebundle_booking_Type_1');
                  $radios.prop('checked', false);
-                document.getElementById('lg_salebundle_booking_Type_0').style.display = 'block';
-                document.querySelector("label[for=lg_salebundle_booking_Type_0]").style.display = 'block';
+                $('#lg_salebundle_booking_Type_0').css('display','block');
+                $("label[for=lg_salebundle_booking_Type_0]").css('display','block');
 
             }
 

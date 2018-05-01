@@ -18,7 +18,7 @@ class HomeControllerTest extends WebTestCase
 
         $this->assertSame(200, $client->getResponse()->getStatusCode());
 
-        $this->assertSame(1, $crawler->filter('html:contains("Les Tarifs")')->count());
+        $this->assertSame(1, $crawler->filter('html:contains("Horaires")')->count());
     }
 
     public function testOrderPrepareWithoutBooking()

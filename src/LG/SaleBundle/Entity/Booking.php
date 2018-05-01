@@ -50,6 +50,7 @@ class Booking
      */
     private $bookingDate;
 
+
     /**
      * @var string
      *
@@ -74,8 +75,37 @@ class Booking
 
     /**
      * @ORM\OneToMany(targetEntity="LG\SaleBundle\Entity\Ticket", mappedBy="booking",cascade={"persist"})
+     * @var ArrayCollection
+     *
+     * @Assert\All({
+     *     @Assert\Type(type="LG\SaleBundle\Entity\Ticket"),
+     * })
+     * @Assert\Valid
      */
     private $tickets;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code", type="string")
+     */
+    private $code;
+
+    /**
+     * @return string
+     */
+    public function getCode(): string
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param string $code
+     */
+    public function setCode(string $code)
+    {
+        $this->code = $code;
+    }
 
 
     /**
@@ -85,6 +115,7 @@ class Booking
     {
         $this->bookingDate = new \DateTime();
         $this->tickets = new ArrayCollection();
+        $this->code = substr(bin2hex(openssl_random_pseudo_bytes(100)), 0, 6);
     }
 
 

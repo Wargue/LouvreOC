@@ -98,7 +98,7 @@ class HomeController extends Controller
     {
         $booking = $request->getSession()->get('booking');
         if (null === $booking){
-            $this->addFlash("notice",'Aucune réservation n\'a été effectuée');
+            $this->addFlash("warning",'Aucune réservation n\'a été effectuée');
             return $this->redirectToRoute('price');
         }
 
@@ -122,7 +122,7 @@ class HomeController extends Controller
             $code = substr(bin2hex(openssl_random_pseudo_bytes(100)), 0, 6);
             $mailer->sendMail($booking,$code);
 
-            $this->addFlash("notice","Bravo ça marche !");
+            $this->addFlash("success","Nous avons bien reçu votre réservation et nous vous en remercions. Nous vous souhaitons une excellente visite au sein de Musée du Louvre !");
 
             $request->getSession()->remove('booking');
 

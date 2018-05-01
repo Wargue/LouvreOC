@@ -49,9 +49,18 @@
 
         <div class="row">
             <div id="content" class="col-md-12">
-                {% for message in app.flashes('notice') %}
+                {% for message in app.flashes('success') %}
                     <div class="alert alert-success">
-                        <span class="glyphicons glyphicons-thumbs-up"></span>{{ message }}
+                        <h2 class="alert-heading"><span class="glyphicon glyphicon-thumbs-up"></span> <strong>FELICITATION !</strong></h2>
+                        {{ message }}
+                        <hr>
+                        <p>Un mail de confirmation vient de vous être envoyé, veuillez ne pas le jeter il vous servira de ticket à l'entrée</p>
+                    </div>
+                {% endfor %}
+                {% for message in app.flashes('warning') %}
+                    <div class="alert alert-warning">
+                        <h2 class="alert-heading">ATTENTION !</h2>
+                        {{ message }}
                     </div>
                 {% endfor %}
                 {% block body %}

@@ -39,7 +39,6 @@
                             <ul class="nav navbar-nav">
                                 <li {% if app.request.attributes.get('_route') == 'home' %}class="active"{% endif %}><a href="{{ path('home') }}">Accueil</a></li>
                                 <li {% if app.request.attributes.get('_route') == 'price' %}class="active"{% endif %}><a href="{{ path('price') }}">Tickets</a></li>
-                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div>

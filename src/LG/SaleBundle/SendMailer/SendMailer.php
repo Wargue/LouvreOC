@@ -37,7 +37,7 @@ class SendMailer
         $message = new \Swift_Message('Confirmation de réservation - Le Louvre');
         $message
             ->setFrom('gillet_l@hotmail.com')
-            ->setTo('gillet_l@hotmail.com')
+            ->setTo($booking->getContactMail())
             ->setBody($view)
             ->setContentType("text/html");
 

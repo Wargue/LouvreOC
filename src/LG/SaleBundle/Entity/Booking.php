@@ -5,6 +5,7 @@ namespace LG\SaleBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
  * Booking
@@ -307,4 +308,60 @@ class Booking
     {
         return $this->type;
     }
+
+    /**
+     * @Assert\Callback
+     */
+    public function validateType(ExecutionContextInterface $context){
+
+        $today = new \DateTime();
+        $hours = $today->format('H');
+
+        dump($hours);
+
+        if ($this->getVisitDate()==$today && $hours>14 && $this->getType() == "entire"){
+
+
+            $context->buildViolation('Vous ne pouvez pas réserver pour une journée complète pour aujourd\'hui après 14h00')
+                ->atPath('visitDate')
+                ->addViolation();
+        }
+    }
+
+    /**
+     * @Assert\Callback
+     */
+    public function validateDayBefore(ExecutionContextInterface $context){
+
+        $today = new \DateTime();
+
+        if ($this->getVisitDate()<$today ){
+
+
+            $context->buildViolation('Vous ne pouvez pas réserver une date antérieure à aujourd\'hui')
+                ->atPath('visitDate')
+                ->addViolation();
+        }
+
+    }
+
+    /**
+     * @Assert\Callback
+     */
+    public function validateYearAfter(ExecutionContextInterface $context){
+
+        $today = new \DateTime();
+        $todayModify = $today->modify('+1 year');
+        $year = $todayModify->format('Y');
+        $yearVisited = $this->getVisitDate()->format('Y');
+
+        if ($yearVisited >= $year){
+
+            $context->buildViolation('Les réservations ne sont pas encore ouvertes pour l\'année prochaine')
+                ->atPath('visitDate')
+                ->addViolation();
+        }
+
+    }
+
 }

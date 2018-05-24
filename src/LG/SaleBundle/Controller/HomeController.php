@@ -30,7 +30,7 @@ use LG\SaleBundle\Repository\BookingRepository;
  */
 class HomeController extends Controller
 {
-    const MAXBILLET = 1000;
+
 
     /**
      * @route("/", name="home")
@@ -61,14 +61,13 @@ class HomeController extends Controller
             /* On calcul le nombre de ticket*/
             $booking->setTicketNumber();
 
-            /* On calcul le nombre de ticket existant déjà réservés additionnés à ceux que l'on réserve en ce moment */
+            /* On calcul le nombre de ticket existant déjà réservés additionnés à ceux que l'on réserve en ce moment et on vérifie que la quantité est inférieure à 1000 tickets*/
             $quantity = $this ->getDoctrine()
                 ->getManager()
                 ->getRepository('LGSaleBundle:Booking')
-                ->totalTicketByDate($booking);
+                ->numberTicketControl($booking);
 
-            /* On vérifie qu'il y a bien moins de 1000 tickets (considérant ceux en cours d'achat également) */
-            if ($quantity < self::MAXBILLET){
+            if ($quantity){
                 $request->getSession()->set('booking', $booking);
 
                 /* Si ok, on lance le résumé et on prépare la page pour payer */

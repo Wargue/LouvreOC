@@ -317,8 +317,6 @@ class Booking
         $today = new \DateTime();
         $hours = $today->format('H');
 
-        dump($hours);
-
         if ($this->getVisitDate()==$today && $hours>14 && $this->getType() == "entire"){
 
 
@@ -334,15 +332,14 @@ class Booking
     public function validateDayBefore(ExecutionContextInterface $context){
 
         $today = new \DateTime();
+        $todayModify = $today->format('Y-m-d');
 
-        if ($this->getVisitDate()<$today ){
-
+        if ($this->getVisitDate()<$todayModify ){
 
             $context->buildViolation('Vous ne pouvez pas réserver une date antérieure à aujourd\'hui')
                 ->atPath('visitDate')
                 ->addViolation();
         }
-
     }
 
     /**
@@ -361,7 +358,5 @@ class Booking
                 ->atPath('visitDate')
                 ->addViolation();
         }
-
     }
-
 }
